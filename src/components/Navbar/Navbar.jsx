@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars } from "react-icons/fa";
+import logo from "../../assets/images/logo/favicon/favicon.png"
 import './Navbar.css';
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
             <div className="container">
                 <div className="navWrapper">
                     <div className="navLogo gradient-text">
-                        <a href="">Sirajul <span>.dev</span></a>
+                        <a href=""><i><img src={logo} alt="" /></i>Sirajul <span>.dev</span></a>
                     </div>
                     <div className="navMenu d-none d-lg-block">
                         <ul>

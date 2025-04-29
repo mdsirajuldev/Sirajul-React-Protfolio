@@ -14,7 +14,11 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-
+        i{
+            img{
+                max-height: 30px;
+            }
+        }
         span {
             color: rgb(126 105 171);
         }
