@@ -1,6 +1,7 @@
 import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn, FaGithub, FaPhoneAlt } from "react-icons/fa";
+import logo from "../../assets/images/logo/favicon/favicon.png"
 import "./Footer.css";
 
 export default function Footer() {
@@ -9,7 +10,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3 className="footer-title">Sirajul.dev</h3>
+            <div className="navLogo gradient-text">
+                                    <a href=""><i><img src={logo} alt="" /></i>Sirajul <span>.dev</span></a>
+                                </div>
             <p className="footer-description">
               A motivated and creative frontend developer specializing in
               building user-friendly and visually appealing websites.

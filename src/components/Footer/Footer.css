@@ -1,5 +1,6 @@
 .footer {
-    background: linear-gradient(to right, #6366f1, #8b5cf6); /* match your "bg-portfolio-purple-deeper" */
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    background: linear-gradient(to right, #5758a1, #41365c); 
     color: white;
     padding-top: 3rem;
     padding-bottom: 1.5rem;
