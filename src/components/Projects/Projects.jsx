@@ -4,6 +4,8 @@ import Project1 from "../../assets/images/project/project1.png";
 import Project2 from "../../assets/images/project/project2.png";
 import Project3 from "../../assets/images/project/project3.png";
 import Project4 from "../../assets/images/project/project4.png";
+import Project5 from "../../assets/images/project/project5.png";
+import Project6 from "../../assets/images/project/project6.png";
 import "./Projects.css";
 
 const Projects = () => {
@@ -135,7 +137,7 @@ const Projects = () => {
           <div className="project-card">
             <img
               className="project-image"
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
+              src={Project5}
               alt="Portfolio Website"
             />
             <div className="project-overlay">
@@ -151,7 +153,7 @@ const Projects = () => {
               </div>
               <a
                 className="btn-outline"
-                href="https://tour-travels-opal.vercel.app/"
+                href="https://sirajul-react-protfolio.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -165,7 +167,7 @@ const Projects = () => {
           <div className="project-card">
             <img
               className="project-image"
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
+              src={Project6}
               alt="Resume"
             />
             <div className="project-overlay">
@@ -181,7 +183,7 @@ const Projects = () => {
               </div>
               <a
                 className="btn-outline"
-                href="https://tour-travels-opal.vercel.app/"
+                href="https://resume-psi-inky.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
