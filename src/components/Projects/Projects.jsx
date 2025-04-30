@@ -8,6 +8,56 @@ import Project5 from "../../assets/images/project/project5.png";
 import Project6 from "../../assets/images/project/project6.png";
 import "./Projects.css";
 
+// Dynamic project data array
+const projectData = [
+  {
+    title: "Tour & Travels",
+    description:
+      "Experienced in Tour and Travel web design, creating innovative and user-friendly websites.",
+    image: Project1,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://tour-travels-opal.vercel.app/",
+  },
+  {
+    title: "Education Website",
+    description:
+      "Innovative web designer with a strong academic foundation and proven design expertise.",
+    image: Project2,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://education-mu-lovat.vercel.app/",
+  },
+  {
+    title: "Exdos Website",
+    description:
+      "Experienced in Exdos web design, creating innovative and user-friendly websites.",
+    image: Project3,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://exdos-five.vercel.app/",
+  },
+  {
+    title: "Hospital Website",
+    description:
+      "Experienced in Tour and Travel web design, creating innovative and user-friendly websites.",
+    image: Project4,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://hospital-ten-theta.vercel.app/",
+  },
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio built using HTML, CSS, and JavaScript.",
+    image: Project5,
+    tags: ["HTML", "CSS", "JavaScript", "React"],
+    url: "https://sirajul-react-protfolio.vercel.app/",
+  },
+  {
+    title: "Resume",
+    description: "Here is my resume. Just convert it to HTML and CSS.",
+    image: Project6,
+    tags: ["HTML", "CSS", "JavaScript", "React"],
+    url: "https://resume-psi-inky.vercel.app/",
+  },
+];
+
 const Projects = () => {
   return (
     <div id="projects" className="project-section section-padding">
@@ -16,184 +66,37 @@ const Projects = () => {
           <h2 className="section-title text-center mb-12">My Projects</h2>
         </div>
         <div className="projects-grid">
-          <div className="project-card">
-            <img
-              className="project-image"
-              src={Project1}
-              alt="Tour & Travels"
-            />
-            <div className="project-overlay">
-              <h3 className="project-title">Tour &amp; Travels</h3>
-              <p className="project-description">
-                Experienced in Tour and Travel web design, creating innovative
-                and user-friendly websites.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">HTML</span>
-                <span className="project-tag">CSS</span>
-                <span className="project-tag">JavaScript</span>
+          {projectData.map((project, index) => (
+            <div className="project-card" key={index}>
+              <img
+                className="project-image"
+                src={project.image}
+                alt={project.title}
+              />
+              <div className="project-overlay">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                <div className="project-tags">
+                  {project.tags.map((tag, idx) => (
+                    <span key={idx} className="project-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  className="btn-outline"
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                  <span className="project-icon">
+                    <FaArrowUpRightFromSquare />
+                  </span>
+                </a>
               </div>
-              <a
-                className="btn-outline"
-                href="https://tour-travels-opal.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-                <span className="project-icon">
-                  <FaArrowUpRightFromSquare />
-                </span>
-              </a>
             </div>
-          </div>
-          <div className="project-card">
-            <img
-              className="project-image"
-              src={Project2}
-              alt="Education Website"
-            />
-            <div className="project-overlay">
-              <h3 className="project-title">Education Website</h3>
-              <p className="project-description">
-              Innovative web designer with a strong academic foundation and proven design expertise.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">HTML</span>
-                <span className="project-tag">CSS</span>
-                <span className="project-tag">JavaScript</span>
-              </div>
-              <a
-                className="btn-outline"
-                href="https://education-mu-lovat.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-                <span className="project-icon">
-                  <FaArrowUpRightFromSquare />
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="project-card">
-            <img
-              className="project-image"
-              src={Project3}
-              alt="Exdos Website"
-            />
-            <div className="project-overlay">
-              <h3 className="project-title">Exdos Website</h3>
-              <p className="project-description">
-              Experienced in Exdos web design, creating innovative and user-friendly websites.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">HTML</span>
-                <span className="project-tag">CSS</span>
-                <span className="project-tag">JavaScript</span>
-              </div>
-              <a
-                className="btn-outline"
-                href="https://exdos-five.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-                <span className="project-icon">
-                  <FaArrowUpRightFromSquare />
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="project-card">
-            <img
-              className="project-image"
-              src={Project4}
-              alt="Hospital Website"
-            />
-            <div className="project-overlay">
-              <h3 className="project-title">Hospital Website</h3>
-              <p className="project-description">
-                Experienced in Tour and Travel web design, creating innovative
-                and user-friendly websites.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">HTML</span>
-                <span className="project-tag">CSS</span>
-                <span className="project-tag">JavaScript</span>
-              </div>
-              <a
-                className="btn-outline"
-                href="https://hospital-ten-theta.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-                <span className="project-icon">
-                  <FaArrowUpRightFromSquare />
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="project-card">
-            <img
-              className="project-image"
-              src={Project5}
-              alt="Portfolio Website"
-            />
-            <div className="project-overlay">
-              <h3 className="project-title">Portfolio Website</h3>
-              <p className="project-description">
-              A personal portfolio built using HTML, CSS, and JavaScript.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">HTML</span>
-                <span className="project-tag">CSS</span>
-                <span className="project-tag">JavaScript</span>
-                <span className="project-tag">React</span>
-              </div>
-              <a
-                className="btn-outline"
-                href="https://sirajul-react-protfolio.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-                <span className="project-icon">
-                  <FaArrowUpRightFromSquare />
-                </span>
-              </a>
-            </div>
-          </div>
-          <div className="project-card">
-            <img
-              className="project-image"
-              src={Project6}
-              alt="Resume"
-            />
-            <div className="project-overlay">
-              <h3 className="project-title">Resume</h3>
-              <p className="project-description">
-              Here is my resume. Just convert it to HTML and CSS.
-              </p>
-              <div className="project-tags">
-                <span className="project-tag">HTML</span>
-                <span className="project-tag">CSS</span>
-                <span className="project-tag">JavaScript</span>
-                <span className="project-tag">React</span>
-              </div>
-              <a
-                className="btn-outline"
-                href="https://resume-psi-inky.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-                <span className="project-icon">
-                  <FaArrowUpRightFromSquare />
-                </span>
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
