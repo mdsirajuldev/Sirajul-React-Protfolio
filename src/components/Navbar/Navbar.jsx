@@ -1,46 +1,69 @@
 import React, { useEffect, useState } from 'react';
-import { FaBars } from "react-icons/fa";
-import logo from "../../assets/images/logo/favicon/favicon.png"
+import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../../assets/images/logo/favicon/favicon.png";
 import './Navbar.css';
 
+const navMenu = [
+  { id: 1, menuText: 'Home', link: '#home' },
+  { id: 2, menuText: 'About', link: '#about' },
+  { id: 3, menuText: 'Experience', link: '#experienceEducation' },
+  { id: 4, menuText: 'Projects', link: '#projects' },
+  { id: 5, menuText: 'Skills', link: '#skills' },
+  { id: 6, menuText: 'Education', link: '#experienceEducation' },
+  { id: 7, menuText: 'Contact', link: '#contact' },
+];
+
 const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const offset = window.scrollY;
-            setScrolled(offset > 50);
-        };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
-    return (
-        <div className={`navBar-area ${scrolled ? 'scrolled' : ''}`}>
-            <div className="container">
-                <div className="navWrapper">
-                    <div className="navLogo gradient-text">
-                        <a href=""><i><img src={logo} alt="" /></i>Sirajul <span>.dev</span></a>
-                    </div>
-                    <div className="navMenu d-none d-lg-block">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#experienceEducation">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#experienceEducation">Education</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div className="menu-bar-icon d-lg-none">
-                        <button><FaBars /></button>
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className={`navBar-area ${scrolled ? 'scrolled' : ''}`}>
+      <div className="container">
+        <div className="navWrapper">
+          <div className="navLogo gradient-text">
+            <a href="#home"><i><img src={logo} alt="Logo" /></i>Sirajul <span>.dev</span></a>
+          </div>
+          
+          {/* Desktop Menu */}
+          <div className="navMenu d-none d-lg-block">
+            <ul>
+              {navMenu.map(item => (
+                <li key={item.id}><a href={item.link}>{item.menuText}</a></li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Mobile Menu Icon */}
+          <div className="menu-bar-icon d-lg-none">
+            <button onClick={toggleMenu}>{menuOpen ? <FaTimes /> : <FaBars />}</button>
+          </div>
         </div>
-    );
+        {/* Overlay */}
+      {/* {menuOpen && <div className="mobile-overlay" onClick={toggleMenu}></div>} */}
+        {/* Mobile Menu (conditionally rendered) */}
+        {menuOpen && (
+          <div className="mobile-nav d-lg-none">
+            <ul>
+              {navMenu.map(item => (
+                <li key={item.id}><a href={item.link} onClick={() => setMenuOpen(false)}>{item.menuText}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;
