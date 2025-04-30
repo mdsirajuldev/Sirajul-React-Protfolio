@@ -3,7 +3,7 @@ import "./Skills.css"; // Link to the CSS file
 
 const Skills = () => {
   return (
-    <div className="skill-section section-padding">
+    <div id="skills" className="skill-section section-padding">
       <div className="container">
       <div className="sectionTitle-wrap">
           <h2 className="section-title text-center mb-12">My Skills</h2>

@@ -3,7 +3,7 @@ import "./ExperienceEducation.css";
 
 const ExperienceEducation = () => {
   return (
-    <div className="ExperienceEducation-section section-padding">
+    <div id="experienceEducation" className="ExperienceEducation-section section-padding">
       <div className="container">
         <div className="ExperienceEducation-grid">
           <div className="experience-wap">

@@ -5,7 +5,7 @@ import "./Contact.css";
 
 function Contact() {
   return (
-    <div className="contact-section section-padding">
+    <div id="contact" className="contact-section section-padding">
       <div className="container">
         <div className="sectionTitle-wrap">
           <h2 className="section-title text-center mb-12">Experience</h2>

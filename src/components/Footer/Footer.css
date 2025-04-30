@@ -1,76 +1,77 @@
 .footer {
-    background: linear-gradient(to right, #6366f1, #8b5cf6);
-    background: linear-gradient(to right, #5758a1, #41365c); 
-    color: white;
-    padding-top: 3rem;
-    padding-bottom: 1.5rem;
-  }
-  
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  background: linear-gradient(to right, #5758a1, #41365c);
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
   .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: 5fr 3fr 4fr;
   }
-  
-  @media (min-width: 768px) {
-    .footer-grid {
-      grid-template-columns: 5fr 3fr 4fr;
-    }
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-copyright {
+  border-top: 1px solid #374151;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
+
+  p {
+    margin-bottom: 0;
+    color: var(--white);
   }
-  
-  .footer-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-description {
-    color: #d1d5db;
-    margin-bottom: 1rem;
-  }
-  
-  .footer-socials {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-links a {
-    color: #d1d5db;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover {
-    color: white;
-  }
-  
-  .footer-heading {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  .footer-copyright {
-    border-top: 1px solid #374151; 
-    padding-top: 1.5rem;           
-    text-align: center;
-    color: var(--white);                
-    font-family: Arial, sans-serif;
-    font-size: 0.875rem;
-    
-    p{
-        margin-bottom: 0;
-        color: var(--white); 
-    }           
-  }
+}
