@@ -50,11 +50,11 @@ const projectData = [
     url: "https://sirajul-react-protfolio.vercel.app/",
   },
   {
-    title: "Resume",
-    description: "Here is my resume. Just convert it to HTML and CSS.",
+    title: "Nasal clip product landing page",
+    description: "Here is Nasal clip product landing page. Just convert it to HTML, CSS and JavaScript.",
     image: Project6,
-    tags: ["HTML", "CSS", "JavaScript", "React"],
-    url: "https://resume-psi-inky.vercel.app/",
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://shopify-task-tau.vercel.app/",
   },
 ];
 
