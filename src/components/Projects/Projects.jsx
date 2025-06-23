@@ -6,6 +6,7 @@ import Project3 from "../../assets/images/project/project3.png";
 import Project4 from "../../assets/images/project/project4.png";
 import Project5 from "../../assets/images/project/project5.png";
 import Project6 from "../../assets/images/project/project6.png";
+import Project7 from "../../assets/images/project/project7.png";
 import "./Projects.css";
 
 // Dynamic project data array
@@ -43,11 +44,11 @@ const projectData = [
     url: "https://hospital-ten-theta.vercel.app/",
   },
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio built using HTML, CSS, and JavaScript.",
+    title: "Business Website",
+    description: "Business landing page built using HTML, CSS, and JavaScript.",
     image: Project5,
     tags: ["HTML", "CSS", "JavaScript", "React"],
-    url: "https://sirajul-react-protfolio.vercel.app/",
+    url: "https://business-landing-page-sigma.vercel.app/",
   },
   {
     title: "Nasal clip product landing page",
@@ -55,6 +56,13 @@ const projectData = [
     image: Project6,
     tags: ["HTML", "CSS", "JavaScript"],
     url: "https://shopify-task-tau.vercel.app/",
+  },
+  {
+    title: "Restaurant Website",
+    description: "Here is Restaurant Website. Just convert it to HTML, CSS and JavaScript.",
+    image: Project7,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://restaurant-kappa-five.vercel.app/",
   },
 ];
 
