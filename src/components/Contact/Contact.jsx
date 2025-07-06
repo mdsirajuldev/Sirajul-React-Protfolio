@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn, FaGithub, FaPhoneAlt } from "react-icons/fa";
+import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const contactInfo = [
@@ -81,17 +82,27 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
 
-    // Replace below with EmailJS or fetch call to backend
-    alert("Thank you! Your message has been sent.");
+    const serviceID = "service_t92c67i"; // Replace with your EmailJS service ID
+    const templateID = "template_xxxxxx"; // Replace with your EmailJS template ID
+    const publicKey = "hel8jjzM4GzBH8Tkb"; // Replace with your EmailJS public key
 
-    setFormData({
-      name: "",
-      subject: "",
-      email: "",
-      message: "",
-    });
+    const templateParams = {
+      name: formData.name,
+      subject: formData.subject,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then(() => {
+        alert("ধন্যবাদ! আপনার মেসেজ সফলভাবে পাঠানো হয়েছে।");
+        setFormData({ name: "", subject: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        alert("মেসেজ পাঠাতে সমস্যা হয়েছে। আবার চেষ্টা করুন।");
+        console.error("EmailJS Error:", error);
+      });
   };
 
   return (
@@ -118,6 +129,20 @@ function Contact() {
                         rows={field.rows || 4}
                         required
                         className="form-textarea"
+                        value={formData[field.name]}
+                        onChange={handleChange}
+                      />
+                    ) : field.name === "email" ? (
+                      <input
+                        type="email"
+                        id={field.id}
+                        name={field.name}
+                        placeholder={field.placeholder}
+                        required
+                        autoCapitalize="off"
+                        autoComplete="email"
+                        style={{ textTransform: "lowercase" }}
+                        className="form-input"
                         value={formData[field.name]}
                         onChange={handleChange}
                       />
