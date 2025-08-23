@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedinIn, FaGithub, FaPhoneAlt } from "react-icons/fa";
-import emailjs from "emailjs-com";
 import "./Contact.css";
 
 const contactInfo = [
@@ -35,76 +34,7 @@ const contactInfo = [
   },
 ];
 
-const formFields = [
-  {
-    id: "name",
-    label: "Name",
-    name: "name",
-    type: "text",
-    placeholder: "Your Name",
-  },
-  {
-    id: "subject",
-    label: "Subject",
-    name: "subject",
-    type: "text",
-    placeholder: "Enter Subject",
-  },
-  {
-    id: "email",
-    label: "Email",
-    name: "email",
-    type: "email",
-    placeholder: "Your Email",
-  },
-  {
-    id: "message",
-    label: "Message",
-    name: "message",
-    type: "textarea",
-    placeholder: "Your Message",
-    rows: 5,
-  },
-];
-
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    subject: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const serviceID = "service_t92c67i"; // Replace with your EmailJS service ID
-    const templateID = "template_xxxxxx"; // Replace with your EmailJS template ID
-    const publicKey = "hel8jjzM4GzBH8Tkb"; // Replace with your EmailJS public key
-
-    const templateParams = {
-      name: formData.name,
-      subject: formData.subject,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then(() => {
-        alert("ধন্যবাদ! আপনার মেসেজ সফলভাবে পাঠানো হয়েছে।");
-        setFormData({ name: "", subject: "", email: "", message: "" });
-      })
-      .catch((error) => {
-        alert("মেসেজ পাঠাতে সমস্যা হয়েছে। আবার চেষ্টা করুন।");
-        console.error("EmailJS Error:", error);
-      });
-  };
-
   return (
     <div id="contact" className="contact-section section-padding">
       <div className="container">
@@ -112,60 +42,6 @@ function Contact() {
           <h2 className="section-title text-center mb-12">Contact</h2>
         </div>
         <div className="contact-grid">
-          <div className="card">
-            <div className="card-content">
-              <h3 className="form-title">Send Me a Message</h3>
-              <form className="form" onSubmit={handleSubmit}>
-                {formFields.map((field, idx) => (
-                  <div className="form-group" key={idx}>
-                    <label htmlFor={field.id} className="form-label">
-                      {field.label}
-                    </label>
-                    {field.type === "textarea" ? (
-                      <textarea
-                        id={field.id}
-                        name={field.name}
-                        placeholder={field.placeholder}
-                        rows={field.rows || 4}
-                        required
-                        className="form-textarea"
-                        value={formData[field.name]}
-                        onChange={handleChange}
-                      />
-                    ) : field.name === "email" ? (
-                      <input
-                        type="email"
-                        id={field.id}
-                        name={field.name}
-                        placeholder={field.placeholder}
-                        required
-                        autoCapitalize="off"
-                        autoComplete="email"
-                        style={{ textTransform: "lowercase" }}
-                        className="form-input"
-                        value={formData[field.name]}
-                        onChange={handleChange}
-                      />
-                    ) : (
-                      <input
-                        type={field.type}
-                        id={field.id}
-                        name={field.name}
-                        placeholder={field.placeholder}
-                        required
-                        className="form-input"
-                        value={formData[field.name]}
-                        onChange={handleChange}
-                      />
-                    )}
-                  </div>
-                ))}
-                <button type="submit" className="form-button">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
 
           <div className="contact-container">
             <h3 className="form-title">Let's Connect</h3>

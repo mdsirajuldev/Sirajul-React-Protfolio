@@ -2,96 +2,7 @@
   background: linear-gradient(to bottom right, rgba(126, 105, 171, 0.2), #ffffff);
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
-}
 
-.card {
-  background-color: #fff;
-  border: 1px solid #d1c4e9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  grid-column: span 7 / span 7;
-  margin-bottom: 0;
-}
-
-.card-content {
-  padding: 24px;
-}
-
-.form-title {
-  font-size: clamp(1.125rem, 0.922rem + 0.7vw, 1.5rem);
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
-  text-align: start;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-label {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 4px;
-  color: #555;
-  text-align: start;
-}
-
-.form-textarea {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px;
-  font-size: 14px;
-  outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
-}
-
-.form-group input {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px;
-  font-size: 14px;
-  outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
-  height: 38px;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  border-color: #673ab7;
-  box-shadow: 0 0 0 2px rgba(103, 58, 183, 0.2);
-}
-
-.form-button {
-  background-color: #6b4eff;
-  color: white;
-  font-size: 14px;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.form-button:hover {
-  background-color: #593ee0;
-}
-
-
-.contact-container {
-  grid-column: span 5 / span 5;
-}
 
 .contact-description {
   color: #4b5563;
@@ -101,16 +12,19 @@
 }
 
 .contact-links {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
-
+@media (max-width: 776px) {
+  .contact-links {
+    grid-template-columns: 1fr; 
+  }
+}
 .contact-link {
   display: flex;
   align-items: center;
   padding: 1rem;
-  background: white;
   border-radius: 0.5rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;

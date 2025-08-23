@@ -7,6 +7,8 @@ import Project4 from "../../assets/images/project/project4.png";
 import Project5 from "../../assets/images/project/project5.png";
 import Project6 from "../../assets/images/project/project6.png";
 import Project7 from "../../assets/images/project/project7.png";
+import Project8 from "../../assets/images/project/project8.png";
+import Project9 from "../../assets/images/project/project9.png";
 import "./Projects.css";
 
 // Dynamic project data array
@@ -52,17 +54,35 @@ const projectData = [
   },
   {
     title: "Nasal clip product landing page",
-    description: "Here is Nasal clip product landing page. Just convert it to HTML, CSS and JavaScript.",
+    description:
+      "Here is Nasal clip product landing page. Just convert it to HTML, CSS and JavaScript.",
     image: Project6,
     tags: ["HTML", "CSS", "JavaScript"],
     url: "https://shopify-task-tau.vercel.app/",
   },
   {
     title: "Restaurant Website",
-    description: "Here is Restaurant Website. Just convert it to HTML, CSS and JavaScript.",
+    description:
+      "Here is Restaurant Website. Just convert it to HTML, CSS and JavaScript.",
     image: Project7,
     tags: ["HTML", "CSS", "JavaScript"],
     url: "https://restaurant-kappa-five.vercel.app/",
+  },
+  {
+    title: "Modern Store Website",
+    description:
+      "Here is shopping Website. Just convert it to HTML, CSS and JavaScript.",
+    image: Project8,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://shhoping-here.vercel.app/",
+  },
+  {
+    title: "Modern User Profile Website",
+    description:
+      "Here is shopping Website. Just convert it to HTML, CSS and JavaScript.",
+    image: Project9,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://shope-user-porfile.vercel.app/",
   },
 ];
 

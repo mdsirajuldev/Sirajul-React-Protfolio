@@ -90,10 +90,8 @@
 
 
 .about-details-wrapper {
-    background: white;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: clamp(1.563rem, 1.422rem + 0.7vw, 2rem);
     margin-top: clamp(1.875rem, 1.675rem + 1vw, 2.5rem);
 }

@@ -3,17 +3,24 @@ import "./ExperienceEducation.css";
 const experiences = [
   {
     title: "Frontend Developer Intern",
+    company: "Strawberry Tech Ltd",
+    description: "A company specializing in web development solutions.",
+    responsibilitiesTitle: "Duties/Responsibilities:",
+    responsibilities: [
+      "Built responsive, mobile-first websites and ensured cross-browser compatibility.",
+      "Converted Figma/XD designs into reusable React components for scalability and maintainability.",
+      "Optimized performance, loading speed, and SEO, while integrating APIs and third-party tools.",
+    ],
+  },
+  {
+    title: "Web Designer Intern",
     company: "Optillius",
     description: "A company specializing in web development solutions.",
     responsibilitiesTitle: "Duties/Responsibilities:",
     responsibilities: [
-      "Developed and optimized responsive, pixel-perfect web interfaces.",
-      "Collaborated with senior developers to implement designs using HTML, CSS, and JavaScript.",
-      "Utilized Figma and Photoshop to create wireframes, prototypes, and final UI designs.",
-      "Converted PSD and Figma designs into fully functional HTML templates.",
-      "Participated in user requirements analysis, design, and programming support for the enhancement of Web and mobile applications.",
-      "Maintained and improved the performance of existing websites or web-based software. Wrote reusable code.",
-      "Collaborated with the Backend and QA teams.",
+      "Designed and developed pixel-perfect web interfaces using HTML, CSS, and JavaScript.",
+      "Transformed Figma/PSD designs into functional UI with responsive layouts.",
+      "Improved existing websites by writing clean, reusable code and enhancing performance.",
     ],
   },
 ];
@@ -49,7 +56,7 @@ const ExperienceEducation = () => {
             <div className="timeline-item m-0">
               <div className="timeline-dot"></div>
               {experiences.map((info, inx) => (
-                <div className="timeline-content" key={inx}>
+                <div className="timeline-content mb-3" key={inx}>
                   <h3 className="education-title">{info.title}</h3>
                   <p className="education-institution">{info.company}</p>
                   <p className="education-date">{info.description}</p>
