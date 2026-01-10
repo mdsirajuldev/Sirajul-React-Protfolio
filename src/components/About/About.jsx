@@ -33,12 +33,11 @@ const aboutData = {
   sections: [
     {
       heading: "Introduction",
-      paragraph:
-        `I am a motivated and detail-oriented Frontend Developer & CMS Customization Specialist with a solid foundation in web development and a passion for creating visually appealing, user-friendly websites. 
+      paragraph: `I am a motivated and detail-oriented Frontend Developer & CMS Customization Specialist with a solid foundation in web development and a passion for creating visually appealing, user-friendly websites. 
 I specialize in WordPress, Elementor, and Figma-based design implementation, transforming PSD and Figma designs into fully functional, pixel-perfect, and responsive websites that meet client requirements and industry standards. 
 In addition to front-end development, I am proficient in UI/UX design, ensuring seamless user experiences across various devices and platforms. I have hands-on experience with CMS platforms such as Wix Studio, Squarespace, and Webflow, allowing me to adapt and deliver solutions for diverse projects. 
 I possess strong problem-solving skills, a keen eye for detail, and the ability to collaborate effectively with designers, developers, and stakeholders. My focus is on delivering clean, optimized, and high-performing web solutions that enhance user engagement and achieve project goals. 
-Furthermore, I leverage AI tools to streamline design workflows, improve efficiency, and implement innovative, high-quality frontend solutions that push the boundaries of web design and development.`
+Furthermore, I leverage AI tools to streamline design workflows, improve efficiency, and implement innovative, high-quality frontend solutions that push the boundaries of web design and development.`,
     },
   ],
   contactDetails: [

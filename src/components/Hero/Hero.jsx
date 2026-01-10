@@ -1,89 +1,153 @@
-import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import "./Hero.css";
+import React, { useState } from "react";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import Project1 from "../../assets/images/project/project1.png";
+import Project2 from "../../assets/images/project/project2.png";
+import Project3 from "../../assets/images/project/project3.png";
+import Project4 from "../../assets/images/project/project4.png";
+import Project5 from "../../assets/images/project/project5.png";
+import Project6 from "../../assets/images/project/project6.png";
+import Project7 from "../../assets/images/project/project7.png";
+import Project8 from "../../assets/images/project/project8.png";
+import Project9 from "../../assets/images/project/project9.png";
+import "./Projects.css";
 
-const heroData = {
-  title: "Hi, I'm ",
-  name: "Md Sirajul Islam",
-  role: "Frontend Developer & CMS Customization Specialist",
-  description: `A creative and detail-oriented Frontend Developer & CMS Customization Specialist with strong expertise in WordPress, Elementor, and Figma-based design implementation. 
-Skilled in converting PSD and Figma designs into fully functional, pixel-perfect, and responsive websites. 
-Experienced in UI/UX design, front-end development, and CMS platforms including WordPress, Wix Studio, Squarespace, and Webflow. 
-Passionate about building clean, optimized, and high-performing web experiences while collaborating effectively with teams and clients.`,
-  buttons: [
-    { label: "Contact Me", href: "#contact", className: "btn-primary" },
-    { label: "View Projects", href: "#projects", className: "btn-outline" },
-  ],
-  socialLinks: [
-    {
-      href: "https://www.linkedin.com/in/md-sirajul-islam-dev7/",
-      label: "LinkedIn",
-      icon: <FaLinkedin />,
-    },
-    {
-      href: "https://github.com/mdsirajuldev",
-      label: "GitHub",
-      icon: <FaGithub />,
-    },
-    {
-      href: "mailto:mdsirajul.dev7@gmail.com",
-      label: "Email",
-      icon: <MdEmail />,
-    },
-  ],
-};
+// 🔥 Project Data
+const projectData = [
+  {
+    title: "Tour & Travels",
+    description:
+      "Experienced in Tour and Travel web design, creating innovative and user-friendly websites.",
+    image: Project1,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://tour-travels-opal.vercel.app/",
+  },
+  {
+    title: "Education Website",
+    description:
+      "Innovative web designer with a strong academic foundation and proven design expertise.",
+    image: Project2,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://education-mu-lovat.vercel.app/",
+  },
+  {
+    title: "Exdos Website",
+    description:
+      "Experienced in Exdos web design, creating innovative and user-friendly websites.",
+    image: Project3,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://exdos-five.vercel.app/",
+  },
+  {
+    title: "Hospital Website",
+    description:
+      "Professional hospital website designed for modern healthcare services.",
+    image: Project4,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://hospital-ten-theta.vercel.app/",
+  },
+  {
+    title: "Business Website",
+    description: "Business landing page built using HTML, CSS, JavaScript, and React.",
+    image: Project5,
+    tags: ["HTML", "CSS", "JavaScript", "React"],
+    url: "https://business-landing-page-sigma.vercel.app/",
+  },
+  {
+    title: "Nasal Clip Product Landing Page",
+    description:
+      "A modern product landing page built using HTML, CSS, and JavaScript.",
+    image: Project6,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://shopify-task-tau.vercel.app/",
+  },
+  {
+    title: "Restaurant Website",
+    description:
+      "A responsive restaurant website designed with modern UI and UX.",
+    image: Project7,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://restaurant-kappa-five.vercel.app/",
+  },
+  {
+    title: "Modern Store Website",
+    description:
+      "An eCommerce-style shopping website built using HTML, CSS, and JavaScript.",
+    image: Project8,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://shhoping-here.vercel.app/",
+  },
+  {
+    title: "Modern User Profile Website",
+    description:
+      "A clean and modern user profile interface built using frontend technologies.",
+    image: Project9,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://shope-user-porfile.vercel.app/",
+  },
+];
 
-const Hero = () => {
+const Projects = () => {
+  const [visibleProjects, setVisibleProjects] = useState(6);
+
+  const handleViewMore = () => {
+    setVisibleProjects((prev) => prev + 2);
+  };
+
   return (
-    <section id="home" className="hero-section">
+    <div id="projects" className="project-section section-padding">
       <div className="container">
-        <div className="hero-grid">
-          <div className="hero-content">
-            <h1 className="hero-title">
-              {heroData.title}
-              <span className="gradient-text">{heroData.name}</span>
-            </h1>
-            <h2 className="hero-subtitle">{heroData.role}</h2>
-            <p className="hero-description">{heroData.description}</p>
+        <div className="sectionTitle-wrap">
+          <h2 className="section-title text-center mb-12">My Projects</h2>
+        </div>
 
-            <div className="hero-buttons">
-              {heroData.buttons.map((btn, index) => (
-                <a key={index} href={btn.href} className={btn.className}>
-                  {btn.label}
-                </a>
-              ))}
-            </div>
+        <div className="projects-grid">
+          {projectData.slice(0, visibleProjects).map((project, index) => (
+            <div className="project-card" key={index}>
+              <img
+                className="project-image"
+                src={project.image}
+                alt={project.title}
+              />
 
-            <div className="social-icons">
-              {heroData.socialLinks.map((link, index) => (
+              <div className="project-overlay">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-tags">
+                  {project.tags.map((tag, idx) => (
+                    <span key={idx} className="project-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
                 <a
-                  key={index}
-                  href={link.href}
+                  className="btn-outline"
+                  href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={link.label}
-                  className="icon-btn"
                 >
-                  {link.icon}
+                  View Project
+                  <span className="project-icon">
+                    <FaArrowUpRightFromSquare />
+                  </span>
                 </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="hero-image-wrapper">
-            <div className="hero-image-bg" />
-            <div className="hero-image-inner">
-              <div className="hero-image">
-                {/* Optional image */}
-                {/* <img src="/path/to/image.jpg" alt="Hero" /> */}
               </div>
             </div>
-          </div>
+          ))}
         </div>
+
+        {/* View More Button */}
+        {visibleProjects < projectData.length && (
+          <div className="text-center mt-10">
+            <button onClick={handleViewMore} className="btn-primary">
+              View More
+            </button>
+          </div>
+        )}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Hero;
+export default Projects;
