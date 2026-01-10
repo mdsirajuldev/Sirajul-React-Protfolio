@@ -7,9 +7,10 @@ const heroData = {
   title: "Hi, I'm ",
   name: "Md Sirajul Islam",
   role: "Frontend Developer & CMS Customization Specialist",
-  description: `A motivated and creative Frontend Developer with growing expertise in web development. 
-                Passionate about building user-friendly and visually appealing websites. 
-                I thrive in collaborative environments and excel under pressure.`,
+  description: `A creative and detail-oriented Frontend Developer & CMS Customization Specialist with strong expertise in WordPress, Elementor, and Figma-based design implementation. 
+Skilled in converting PSD and Figma designs into fully functional, pixel-perfect, and responsive websites. 
+Experienced in UI/UX design, front-end development, and CMS platforms including WordPress, Wix Studio, Squarespace, and Webflow. 
+Passionate about building clean, optimized, and high-performing web experiences while collaborating effectively with teams and clients.`,
   buttons: [
     { label: "Contact Me", href: "#contact", className: "btn-primary" },
     { label: "View Projects", href: "#projects", className: "btn-outline" },
