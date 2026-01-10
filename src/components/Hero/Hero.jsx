@@ -5,8 +5,8 @@ import "./Hero.css";
 
 const heroData = {
   title: "Hi, I'm ",
-  name: "Md Sirajul",
-  role: "Frontend Developer",
+  name: "Md Sirajul Islam",
+  role: "Frontend Developer & CMS Customization Specialist",
   description: `A motivated and creative Frontend Developer with growing expertise in web development. 
                 Passionate about building user-friendly and visually appealing websites. 
                 I thrive in collaborative environments and excel under pressure.`,

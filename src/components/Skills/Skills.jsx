@@ -6,9 +6,9 @@ const skillCategories = [
     category: "Frontend",
     skills: [
       { name: "React", level: 70 },
-      { name: "HTML5", level: 90 },
-      { name: "CSS3", level: 85 },
-      { name: "SCSS", level: 80 },
+      { name: "HTML5", level: 95 },
+      { name: "CSS3", level: 90 },
+      { name: "SCSS", level: 95 },
       { name: "JavaScript", level: 75 },
       { name: "jQuery", level: 70 },
     ],
@@ -18,13 +18,17 @@ const skillCategories = [
     skills: [
       { name: "Bootstrap", level: 90 },
       { name: "Tailwind CSS", level: 85 },
+      { name: "Material-UI", level: 70 },
+      { name: "Wix, Wix Studio & Wix Classic Editor", level: 85 },
+      { name: "Squarespace", level: 90 },
     ],
   },
   {
     category: "UI/UX Tools",
     skills: [
-      { name: "Figma", level: 90 },
+      { name: "Figma", level: 95 },
       { name: "Photoshop", level: 85 },
+      { name: "Webflow", level: 85 },
     ],
   },
   {
