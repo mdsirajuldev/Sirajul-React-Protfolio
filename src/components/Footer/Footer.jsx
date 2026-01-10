@@ -11,9 +11,21 @@ const brandInfo = {
   description:
     "A motivated and creative frontend developer specializing in building user-friendly and visually appealing websites.",
   socials: [
-    { icon: <MdEmail className="icon" />, className: "primary" },
-    { icon: <FaGithub className="icon" />, className: "secondary" },
-    { icon: <FaLinkedinIn className="icon" />, className: "blue" },
+    {
+      icon: <MdEmail className="icon" />,
+      className: "primary",
+      link: "mailto:mdsirajul.dev7@gmail.com",
+    },
+    {
+      icon: <FaGithub className="icon" />,
+      className: "secondary",
+      link: "https://github.com/mdsirajuldev",
+    },
+    {
+      icon: <FaLinkedinIn className="icon" />,
+      className: "blue",
+      link: "https://www.linkedin.com/in/md-sirajul-islam-dev7/",
+    },
   ],
 };
 
@@ -33,7 +45,10 @@ const contactLinks = [
       "Mohammodpur, Bosila Road, 40 feet Road, Real Estate Mosjid, Mun Garden, Bangladesh",
     href: "/",
   },
-  { label: "mdsirajul.dev7@gmail.com", href: "mailto:mdsirajul.dev7@gmail.com" },
+  {
+    label: "mdsirajul.dev7@gmail.com",
+    href: "mailto:mdsirajul.dev7@gmail.com",
+  },
   { label: "01759452730", href: "tel:01759452730" },
 ];
 
@@ -54,9 +69,15 @@ export default function Footer() {
             <p className="footer-description">{brandInfo.description}</p>
             <div className="footer-socials">
               {brandInfo.socials.map((social, index) => (
-                <div key={index} className={`icon-circle ${social.className}`}>
+                <a
+                  key={index}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`icon-circle ${social.className}`}
+                >
                   {social.icon}
-                </div>
+                </a>
               ))}
             </div>
           </div>

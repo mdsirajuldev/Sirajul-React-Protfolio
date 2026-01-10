@@ -2,6 +2,22 @@ import React from "react";
 import "./ExperienceEducation.css";
 const experiences = [
   {
+    title: " Frontend Developer & Wordpress Customization",
+    company: "Prospiq Limited (Bangladesh)",
+    description: "A company specializing in web development solutions.",
+    responsibilitiesTitle: "Duties/Responsibilities:",
+    responsibilities: [
+      "Developed and maintained responsive, user-friendly front-end interfaces using HTML, CSS, JavaScript, and React.",
+      "Customized WordPress themes and plugins to meet client-specific design and functionality requirements.",
+      "Converted Figma and Adobe XD designs into high-quality, pixel-perfect web layouts.",
+      "Ensured cross-browser compatibility and mobile responsiveness across all devices.",
+      "Optimized website performance, loading speed, and SEO for better user experience and search visibility.",
+      "Integrated third-party tools, APIs, and plugins to extend website functionality.",
+      "Troubleshot and fixed UI, layout, and functionality issues across multiple WordPress and React projects.",
+      "Collaborated with designers and backend developers to deliver scalable and high-performing web solutions.",
+    ],
+  },
+  {
     title: "Frontend Developer Intern",
     company: "Strawberry Tech Ltd",
     description: "A company specializing in web development solutions.",
