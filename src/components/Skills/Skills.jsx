@@ -20,6 +20,7 @@ const skillCategories = [
       { name: "Tailwind CSS", level: 85 },
       { name: "Material-UI", level: 70 },
       { name: "Wix, Wix Studio & Wix Classic Editor", level: 85 },
+      { name: "WordPress Customization", level: 80 },
       { name: "Squarespace", level: 90 },
     ],
   },
