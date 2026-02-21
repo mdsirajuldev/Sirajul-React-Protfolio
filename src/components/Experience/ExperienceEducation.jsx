@@ -80,7 +80,7 @@ const ExperienceEducation = () => {
   const [visibleExperience, setVisibleExperience] = useState(1);
 
   const handleViewMore = () => {
-    setVisibleExperience((prev) => prev + 2);
+    setVisibleExperience((prev) => prev + 1);
   };
 
   return (
