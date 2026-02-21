@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ExperienceEducation.css";
+
 const experiences = [
   {
-    title: " Frontend Developer & Wordpress Customization",
+    title: "Wix Developer",
+    company: "Web Solutions (Bangladesh)",
+    description: "A company specializing in web development solutions.",
+    responsibilitiesTitle: "Duties/Responsibilities:",
+    responsibilities: [
+      "Designed and developed responsive websites using Wix.",
+      "Converted Figma and PSD designs into fully functional Wix websites.",
+      "Built and managed dynamic pages using Wix CMS.",
+      "Optimized websites for SEO, speed, and mobile responsiveness.",
+      "Integrated contact forms, booking systems, and third-party tools.",
+      "Ensured cross-browser and mobile compatibility.",
+      "Provided website maintenance and regular updates.",
+      "Collaborated with designers and backend developers to deliver scalable and high-performing web solutions.",
+    ],
+  },
+  {
+    title: "Frontend Developer & Wordpress Customization",
     company: "Prospiq Limited (Bangladesh)",
     description: "A company specializing in web development solutions.",
     responsibilitiesTitle: "Duties/Responsibilities:",
@@ -40,6 +57,7 @@ const experiences = [
     ],
   },
 ];
+
 const educationData = [
   {
     degree: "B.Sc. in Computer Science & Engineering",
@@ -57,7 +75,14 @@ const educationData = [
     duration: "01/2010 – 12/2016",
   },
 ];
+
 const ExperienceEducation = () => {
+  const [visibleExperience, setVisibleExperience] = useState(1);
+
+  const handleViewMore = () => {
+    setVisibleExperience((prev) => prev + 2);
+  };
+
   return (
     <div
       id="experienceEducation"
@@ -71,11 +96,13 @@ const ExperienceEducation = () => {
             </div>
             <div className="timeline-item m-0">
               <div className="timeline-dot"></div>
-              {experiences.map((info, inx) => (
+
+              {experiences.slice(0, visibleExperience).map((info, inx) => (
                 <div className="timeline-content mb-3" key={inx}>
                   <h3 className="education-title">{info.title}</h3>
                   <p className="education-institution">{info.company}</p>
                   <p className="education-date">{info.description}</p>
+
                   <div className="duties-text">
                     <h4 className="education-title">
                       {info.responsibilitiesTitle}
@@ -88,12 +115,22 @@ const ExperienceEducation = () => {
                   </div>
                 </div>
               ))}
+
+              {visibleExperience < experiences.length && (
+                <div className="text-center mt-3">
+                  <button onClick={handleViewMore} className="btn-primary">
+                    View More
+                  </button>
+                </div>
+              )}
             </div>
           </div>
+
           <div className="education-wrap">
             <div className="sectionTitle-wrap">
               <h2 className="section-title text-center mb-12">Education</h2>
             </div>
+
             {educationData.map((education, index) => (
               <div className="timeline-item" key={index}>
                 <div className="timeline-dot"></div>
