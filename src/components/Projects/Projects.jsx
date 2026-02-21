@@ -13,8 +13,13 @@ import Project10 from "../../assets/images/project/project10.png";
 import Project11 from "../../assets/images/project/project11.png";
 import Project12 from "../../assets/images/project/project12.png";
 import Project13 from "../../assets/images/project/project13.png";
-import Project114 from "../../assets/images/project/project114.png";
+import Project14 from "../../assets/images/project/project14.png";
 import Project15 from "../../assets/images/project/project15.png";
+import Project16 from "../../assets/images/project/project16.png";
+import Project17 from "../../assets/images/project/project17.png";
+import Project18 from "../../assets/images/project/project18.png";
+import Project19 from "../../assets/images/project/project19.png";
+
 import "./Projects.css";
 
 // 🔥 Project Data
@@ -44,6 +49,14 @@ const projectData = [
     url: "https://exdos-five.vercel.app/",
   },
   {
+    title: "Laundry Website",
+    description:
+      "Experienced in Laundry web design, creating innovative and user-friendly websites.",
+    image: Project18,
+    tags: ["CMS, Wix Studio"],
+    url: "https://sirajdev01.wixstudio.com/laundromat/",
+  },
+  {
     title: "Hospital Website",
     description:
       "Professional hospital website designed for modern healthcare services.",
@@ -52,11 +65,25 @@ const projectData = [
     url: "https://hospital-ten-theta.vercel.app/",
   },
   {
+    title: "Restaurant Website",
+    description: "Restaurant landing page built using wix studio.",
+    image: Project17,
+    tags: ["CMS, Wix Studio"],
+    url: "https://websolutionstech.wixstudio.com/italian-food",
+  },
+  {
     title: "Business Website",
     description: "Business landing page built using HTML, CSS, JavaScript, and React.",
     image: Project5,
     tags: ["HTML", "CSS", "JavaScript", "React"],
     url: "https://business-landing-page-sigma.vercel.app/",
+  },
+  {
+    title: "Spa Center Website",
+    description: "Spa Center landing page built using wix studio.",
+    image: Project14,
+    tags: ["CMS, Wix Studio"],
+    url: "https://sirajdev01.wixstudio.com/spacenter",
   },
   {
     title: "Nasal Clip Product Landing Page",
@@ -99,6 +126,14 @@ const projectData = [
     url: "https://pos-iota-six.vercel.app/",
   },
   {
+    title: "Modern StudioTill Website",
+    description:
+      "A clean and modern StudioTill service interface built using Wix studio.",
+    image: Project16,
+    tags: ["CMS, Wix Studio"],
+    url: "https://sirajdev01.wixstudio.com/laundromat/",
+  },
+  {
     title: "Modern User Profile Website",
     description:
       "A clean and modern user profile interface built using frontend technologies.",
@@ -110,7 +145,7 @@ const projectData = [
     title: "Modern User Small e-Commerce Website",
     description:
       "A clean and modern user profile interface built using frontend technologies.",
-    image: Project114,
+    image: Project19,
     tags: ["HTML", "CSS", "React"],
     url: "https://e-commerce-react-website-eight.vercel.app/",
   },
