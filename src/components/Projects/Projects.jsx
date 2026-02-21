@@ -67,7 +67,7 @@ const projectData = [
   {
     title: "Restaurant Website",
     description: "Restaurant landing page built using wix studio.",
-    image: Project14,
+    image: Project18,
     tags: ["CMS, Wix Studio"],
     url: "https://websolutionstech.wixstudio.com/italian-food",
   },
