@@ -52,7 +52,7 @@ const projectData = [
     title: "Laundry Website",
     description:
       "Experienced in Laundry web design, creating innovative and user-friendly websites.",
-    image: Project18,
+    image: Project17,
     tags: ["CMS, Wix Studio"],
     url: "https://sirajdev01.wixstudio.com/laundromat/",
   },
