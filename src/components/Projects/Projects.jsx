@@ -91,7 +91,7 @@ const projectData = [
     title: "Glow Nest Clip Product E-Commerce Website",
     description:
       "A modern E-Commerce Website built using HTML, CSS, and JavaScript.",
-    image: Project6,
+    image: Project21,
     tags: ["HTML", "CSS", "JavaScript"],
     url: "https://glow-nest-lake.vercel.app/",
   },
