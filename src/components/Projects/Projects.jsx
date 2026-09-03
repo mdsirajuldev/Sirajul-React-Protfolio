@@ -19,6 +19,8 @@ import Project16 from "../../assets/images/project/project16.png";
 import Project17 from "../../assets/images/project/project17.png";
 import Project18 from "../../assets/images/project/project18.png";
 import Project19 from "../../assets/images/project/project19.png";
+import Project20 from "../../assets/images/project/project20.png";
+import Project21 from "../../assets/images/project/project21.png";
 
 import "./Projects.css";
 
@@ -72,11 +74,11 @@ const projectData = [
     url: "https://websolutionstech.wixstudio.com/italian-food",
   },
   {
-    title: "Business Website",
-    description: "Business landing page built using HTML, CSS, JavaScript, and React.",
-    image: Project5,
-    tags: ["HTML", "CSS", "JavaScript", "React"],
-    url: "https://business-landing-page-sigma.vercel.app/",
+    title: "Planto Indoor Tree Website",
+    description: "Indoor Tree Website built using HTML, CSS, JavaScript.",
+    image: Project20,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://planto-pink.vercel.app/",
   },
   {
     title: "Spa Center Website",
@@ -86,12 +88,12 @@ const projectData = [
     url: "https://sirajdev01.wixstudio.com/spacenter",
   },
   {
-    title: "Nasal Clip Product Landing Page",
+    title: "Glow Nest Clip Product E-Commerce Website",
     description:
-      "A modern product landing page built using HTML, CSS, and JavaScript.",
+      "A modern E-Commerce Website built using HTML, CSS, and JavaScript.",
     image: Project6,
     tags: ["HTML", "CSS", "JavaScript"],
-    url: "https://shopify-task-tau.vercel.app/",
+    url: "https://glow-nest-lake.vercel.app/",
   },
   {
     title: "Restaurant Website",
@@ -142,6 +144,13 @@ const projectData = [
     url: "https://shope-user-porfile.vercel.app/",
   },
   {
+    title: "Business Website",
+    description: "Business landing page built using HTML, CSS, JavaScript, and React.",
+    image: Project5,
+    tags: ["HTML", "CSS", "JavaScript", "React"],
+    url: "https://business-landing-page-sigma.vercel.app/",
+  },
+  {
     title: "Modern User Small e-Commerce Website",
     description:
       "A clean and modern user profile interface built using frontend technologies.",
@@ -156,6 +165,14 @@ const projectData = [
     image: Project10,
     tags: ["Material UI", "React"],
     url: "https://dasbroad-m-ui.vercel.app/",
+  },
+  {
+    title: "Nasal Clip Product Landing Page",
+    description:
+      "A modern product landing page built using HTML, CSS, and JavaScript.",
+    image: Project6,
+    tags: ["HTML", "CSS", "JavaScript"],
+    url: "https://shopify-task-tau.vercel.app/",
   },
   {
     title: "Modern User Food Delivery Website",
